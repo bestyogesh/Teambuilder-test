@@ -5,6 +5,7 @@ import Marquee from "../../comps/Marquee";
 import { urlFor } from "../../lib/client";
 import { UC } from "../context";
 import { Minus, Plus, Star } from "../../comps/Svg";
+import { formatUSDToJPY } from "../../lib/utils";
 
 const Show = ({ product, products }) => {
   console.log("show");
@@ -101,7 +102,7 @@ const Show = ({ product, products }) => {
               <div className=" text-secondary font-medium ">DETAILS:</div>
               <p className="w-2/3 text-lightGray"> {product.details}</p>
 
-              <div className=" my-4 text-2xl font-bold"> ${product.price} </div>
+              <div className=" my-4 text-2xl font-bold"> {formatUSDToJPY(product.price)} </div>
 
               {/* ==== QUANTITY SHOW  */}
               <div className="flex">
